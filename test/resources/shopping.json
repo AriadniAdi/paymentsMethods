@@ -1,0 +1,16 @@
+{
+    "clientId": "Ariadni",
+    "amount": 200,
+    "buyer": {
+        "name": "ariadni",
+        "cpf": "02842054008",
+        "email": "ww@www.com"
+    },
+	"card" : { 
+    	"cardType" : "VISA" , 
+    	"number" : "4111111111111111" , 
+    	"expiryMonth" : "03" , 
+    	"expiryYear" : "2100" , 
+    	"cvv" : "123" 
+	}
+}
