@@ -16,6 +16,18 @@ class CreditValidate {
             return 'Missing expiry year';
         }
 
+        var currentDate = new Date().getFullYear()
+
+        if(data.card.expiryYear < currentDate) {
+            return 'Year has passed'
+        }
+
+        var currentMonth = new Date().getMonth()
+
+        if(data.card.expiryMonth < currentMonth) {
+            return 'month has passed'
+        }
+
         data.card["cardType"] = data.card["cardType"].toUpperCase();
 
         if(!['MASTERCARD', 'VISA', 'AMERICANEXPRESS', 'JBC', 'DINERSCLUB'].includes(data.card.cardType)) {
@@ -23,18 +35,11 @@ class CreditValidate {
         }
 
         var validation = CreditCard.validate(data.card)
-
         if(!validation.validCvv) {
             return 'invalid ccv';
         }
         if(!validation.validCardNumber) {
             return 'invalid card number'
-        }
-        if(!validation.validExpiryMonth) {
-            return 'invalid expiry month'
-        }
-        if(!validation.validExpiryYear) {
-            return 'invalid expiry year'
         }
     }
 }

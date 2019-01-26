@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require("path");
 
-class Test {
+class ParseData {
     constructor(databasePath = '../resources/shopping.json') {
         this.databasePath = databasePath;
     }
@@ -13,4 +13,4 @@ class Test {
     }
 }
 
-module.exports = Test;
+module.exports = ParseData;
