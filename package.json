@@ -22,6 +22,7 @@
     "credit-card": "^3.0.1",
     "email-validator": "^2.0.4",
     "express": "^4.16.4",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.7"
   }
 }
