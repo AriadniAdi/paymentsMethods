@@ -39,7 +39,7 @@ describe('CreditValidate', function() {
         let message = CreditValidate.validateCreditCard(data);
         assert.notEqual(message, null, message)
       });
-      it('when not passed number card', function() {
+      it('when number card is not passed', function() {
         var data = {
           clientId: "Ariadni",
           amount: 200,
@@ -59,7 +59,7 @@ describe('CreditValidate', function() {
         let message = CreditValidate.validateCreditCard(data);
         assert.notEqual(message, null, message)
       });
-      it('when not passed expiry month', function() {
+      it('when expiry month is not passed', function() {
         var data = {
           clientId: "Ariadni",
           amount: 200,
@@ -79,7 +79,7 @@ describe('CreditValidate', function() {
         let message = CreditValidate.validateCreditCard(data);
         assert.notEqual(message, null, message)
       });
-      it('when not passed expiry year', function() {
+      it('when not expiry year is not passed', function() {
         var data = {
           clientId: "Ariadni",
           amount: 200,
@@ -99,7 +99,7 @@ describe('CreditValidate', function() {
         let message = CreditValidate.validateCreditCard(data);
         assert.notEqual(message, null, message)
       });
-      it('when not passed cvv', function() {
+      it('when cvv is not passed', function() {
         var data = {
           clientId: "Ariadni",
           amount: 200,
@@ -228,25 +228,27 @@ describe('CreditValidate', function() {
       let message = CreditValidate.validateCreditCard(data);
       assert.notEqual(message, null, message)
       });
-      it('when all data is valid', function() {
-        var data = {
-          clientId: "Ariadni",
-          amount: 200,
-          buyer: {
-              name: "ariadni",
-              cpf: "02842054008",
-              email: "ww@www.com"
-          },
-        card : {
-            cardType : "VISA" , 
-            number : "4556759381887927" , 
-            expiryMonth :  "02", 
-            expiryYear : "2019" , 
-            cvv : "859" 
+      context('Validate corretly credit datas ', function() {
+        it('when all data is valid', function() {
+          var data = {
+            clientId: "Ariadni",
+            amount: 200,
+            buyer: {
+                name: "ariadni",
+                cpf: "02842054008",
+                email: "ww@www.com"
+            },
+          card : {
+              cardType : "VISA" , 
+              number : "4556759381887927" , 
+              expiryMonth :  "02", 
+              expiryYear : "2019" , 
+              cvv : "859" 
+          }
         }
-      }
-      let message = CreditValidate.validateCreditCard(data);
-      assert.equal(message, null, message)
+        let message = CreditValidate.validateCreditCard(data);
+        assert.equal(message, null, message)
+        });
       });
     });
   });
