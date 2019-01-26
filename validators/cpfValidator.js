@@ -6,11 +6,15 @@ class CpfValidator {
             return 'Missing cpf';
         }
 
+        if(!data.buyer.name) {
+            return 'Missing buyer name';
+        }
+
         var isValidCpf = cpf.isValid(data.buyer.cpf);
 
         if(isValidCpf === false) {
             return 'Invalid cpf';
-        } 
+        }
     }
 }
 

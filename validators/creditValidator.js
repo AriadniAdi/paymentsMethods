@@ -2,11 +2,7 @@ var CreditCard = require('credit-card');
 
 class CreditValidate {
     static validateCreditCard(data) {
-        console.log(CreditCard.validate(data))
 
-        // if(!data.creditCard.name) {
-        //     return 'Missing credit card name';
-        // }
         if(!data.card.cardType) {
             return 'Missing card number';
         }
@@ -20,27 +16,24 @@ class CreditValidate {
             return 'Missing expiry year';
         }
         
-        // var validation = CreditCard.validate(data.card)
+        var validation = CreditCard.validate(data.card)
 
-        // if(!validation.validCvv) {
-        //     return 'invalid ccv';
-        // }
+        if(!validation.validCvv) {
+            return 'invalid ccv';
+        }
         
-        // if(!validation.validCardNumber) {
-        //     return 'invalid card number';
-        // }
+        if(!validation.validCardNumber) {
+            return 'invalid card number';
+        }
 
-        // if(!validation.validExpiryMonth) {
-        //     return 'invalid expiry month';
-        // }
+        if(!validation.validExpiryMonth) {
+            return 'invalid expiry month';
+        }
 
-        // if(!validation.validExpiryYear) {
-        //     return 'invalid expiry year';
-        // }
+        if(!validation.validExpiryYear) {
+            return 'invalid expiry year';
+        }
 
-        // if(!validation.isExpired) {
-        //     return 'card expired';
-        // }
     }
 }
 
