@@ -1,5 +1,51 @@
+# API - PaymentMethods
+Api for payments
+
+## Funcionalities
+* Payment by bank transfer
+* Payment by credit card
+
+
+## Validations
+Only card types (uppercase and format) are allowed:
+
+* VISA,
+* MASTERCARD,
+* AMERICANEXPRESS,
+* DINERSCLUB
+* JCB
+
+* Credit card type must be valid.
+* Does not accept card expired.
+* CVV must be valid.
+* All json values (of ticket or credit card) must be filled.
+
+## Language
+
+* JavaScript
+
+## Execution
+
+## Request
+ * Node.js
+``npm install``
+
+## Enviroment configuration
+ 
+1. On the terminal open the server folder inside the project root. And run:
+2. `` npm install`` for installation of tdd mocha tests.
+
+## To run the unit tests
+1. On the terminal open the server folder inside the project root. And run:
+Npm test
+
+## To run the project
+1. On the terminal open the server folder inside the project root. And run:
+2. `` node app.js``
+
 # API - endpoints
-# Pay
+
+## Pay
 ## Url: ```http://localhost:3000/pay```
 ### Method: ```POST```
 
