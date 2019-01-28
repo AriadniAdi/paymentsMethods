@@ -37,7 +37,7 @@ Only card types (uppercase and format) are allowed:
 
 ## To run the unit tests
  
-1. On the terminal open the server folder inside the project root. And run:
+1. On the terminal open the server folder inside the project root. And run:<br>
 2.`` npm test`` 
 
 ## To run the project
