@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const paymentValidator = require("./validators/payment-validator.js");
+const paymentValidator = require("./validators/paymentValidator.js");
+const BoletoProvider = require("./src/boletoProvider.js");
 const port = 3000;
 
 app.use(bodyParser.urlencoded({extended: false}))
@@ -24,5 +25,5 @@ app.post('/pay/boleto', function (req, res) {
     res.send(404, { message: messages.join(",")});
     return;
   }
-  res.send('Got a POST request  ' + req.body.buyer.name)
+  res.send({ "boleto": new BoletoProvider().generateBoleto(req.body.amount)});
 })
