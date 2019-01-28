@@ -36,7 +36,8 @@ Only card types (uppercase and format) are allowed:
 2. `` npm install`` for installation of tdd mocha tests.
 
 ## To run the unit tests
-1. On the terminal open the server folder inside the project root. And run:<br>
+ 
+1. On the terminal open the server folder inside the project root. And run:
 2.`` npm test`` 
 
 ## To run the project
