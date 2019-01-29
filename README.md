@@ -58,7 +58,6 @@ Only card types (uppercase and format) are allowed:
 
 ~~~json
 {
-	"client_id": 2,
 	"amount": 200,
 	"buyer": {
 		"name": "ariadni",
@@ -104,7 +103,6 @@ Only card types (uppercase and format) are allowed:
 
 ~~~json
 {
-	"client_id": 2,
 	"amount": 200,
 	"buyer": {
 		"name": "ariadni",
